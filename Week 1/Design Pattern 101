@@ -1,1 +1,47 @@
 Course Notes for Week 1
+
+Books to Refer: Design Patterns: Elements of Reusable object oriented software
+By: Gamma, Helm, Johnson, and Vlissides
+known as Gang of Four:
+
+Which two situations would a design pattern best be used in?
+
+Fixing “spaghetti code” -- for example, source code that has no structure or tangled program flow.
+
+Solving a common software design problem that may have been encountered before.
+
+Pattern Language:
+A pattern language is a collection of patterns that are related to a
+certain problem space. Depending on the context of the problem, you would select 
+different pattern language to use.
+
+Main Categories of Patterns:
+
+Creational Pattern: Tackles how you handle creating or cloning new objects. 
+these patterns depend on the language used, 
+since languages like JS would rely on cloning, as it does not have any notions of Class
+whereas, languages like Java, C# instantiate objects using specific classes defined at runtime
+
+Structural Patterns:
+These patterns describe how objects are connected to each other. these patterns
+related to the design principles of decomposition & generalisation.
+
+A good metaphor for considering structural patterns is that of
+pairing different kinds of foods together: flavor determines
+what ingredients can be mixed together to form a suitable
+relationship. Some relationships combine ingredients together,
+such as chickpeas and garlic in hummus. Some relationships
+still combine ingredients, but those ingredients may maintain
+some independence, like a salad of mixed vegetables. Some
+relationships allow a pairing of ingredients, without a physical
+combination, like wine and cheese.
+
+Behavioural Patterns: how objects distribute work and describe how each object does a single cohesive function 
+
+A good metaphor for considering behavioral patterns is that of
+a racing car pit crew at a track. Every member of the crew has a
+role, but together they work as a team to achieve a common
+goal. Similarly, a behavioral pattern lays out the overall goal
+and purpose for each object.
+
+
