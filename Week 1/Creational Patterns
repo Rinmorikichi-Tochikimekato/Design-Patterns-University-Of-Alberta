@@ -1,0 +1,50 @@
+Creational Patterns:
+
+Single Pattern:
+
+A singleton design pattern only has one object of a class
+
+Another goal of a singleton pattern is that the singleton object is globally accessible 
+within the program.
+
+
+How do we make a singleton Class
+Make the constructor private, so that it can't be used outside the class.
+
+Make a private static object property of the class
+
+Define a getter method, that would check if a instance is already defined, if so then return this object
+otherwise create a new instance, assign it to the static object and then return it for further use.
+
+For example
+
+***
+
+public class SingletonClass{
+
+  private static SingletonClass uniqueInstance = null;
+  
+  private SingletonClass(){
+    ...
+  }
+  
+  public static SingletonClass getInstance(){
+    if(uniqueInstance == null){
+        uniqueInstane = new SingletonClass();
+    }
+    return uniqueInstance;
+  }
+  
+*** 
+
+Also, this enables Lazy creation, where the object is only created when the getInstance method is called, this would 
+be helpful if the object was large
+
+Problems: Multithreading scenarios, if multiple threads try to acces the same objects
+
+Real World Usecases:
+Preference of an APP
+print queue in a printer
+software driver for a device
+
+}
