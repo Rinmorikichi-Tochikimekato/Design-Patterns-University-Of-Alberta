@@ -47,4 +47,93 @@ Preference of an APP
 print queue in a printer
 software driver for a device
 
+
+2. Factory Method Pattern:
+
+Concrete instantiation is the primary purpose of Factories. In general, a factory object
+is an instance of a factory class, which has a method to create product objects
+
+The multiple snippets instantiation code at various place can be consolidated at the object factory, 
+in which objects types can be added or removed centrally. Changes are only required in the factory and not the client method
+
+For Example, We have a KnifeFactory class to handle instantiation and a KnifeStore class that acts as a client
+
+public class KnifeFactory{
+  public Knife createKnife(String knifeType){
+    Knife knife = null;
+    
+    if(knifeType.equals("steak"){
+      knife = new SteakKnife();
+    }else if(knifeType.equals("chefs")){
+      knife = new ChefsKnife();
+    }
+    return knife;
+  }
 }
+
+
+public class KnifeStore{
+  private KnifeFactory knifeFactory;
+  
+  public KnifeStore(KnifeFactory knifeFactory){
+    this.knifeFactory = knifeFactory;
+  }
+  
+  public Knife orderKnife(String knifeType){
+    Knife knife;
+    
+    // business logic for creating knifes is moved to this class, and hence it is separate from client method
+    knife = knifeFactory.createKnife(knifeType);
+    
+    knife.sharpen();
+    knife.polish();
+    knife.package();
+    
+    return knife;
+  }
+}
+
+Factories allow client code to operate on generalizations. This is known as
+Coding to an interface, not an implementation. The client method is decouple from dealing with knife subclasses and
+only focuses on completing its taask at hand now
+
+
+Factory Method Pattern: 
+The factory method pattern does not use a factory pattern onto itself.
+Instead, the factory method uses a separate "method" in the same class to create onjects. 
+
+public abstract class KnifeStore{
+  
+  public Knife orderKnife(String knifeType){
+    
+    Knife knife = null;
+    
+    knife = knifeCreator(knifeType);
+    
+    knife.sharpen();
+    knife.polish();
+    knife.package();
+    
+    return knife;
+  }
+  
+  abstract Knife knifeCreator(String knife);
+}
+
+public class BudgetKnifeStore extends KnifeStore{
+  
+  public Knife knifeCreator(String knifeType){
+    
+    if(knifeType.equals("steak"){
+      knife = new BudgetSteakKnife();
+    }else if(knifeType.equals("chefs")){
+      knife = new BudgetChefsKnife();
+    }
+    
+    return knife;
+  }
+}
+
+UML DIAGRAMS: 
+
+
