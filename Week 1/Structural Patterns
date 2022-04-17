@@ -1,2 +1,39 @@
 // Structural Design Patterns 
 
+Facade Pattern :
+A facade simply acts as a point of entry in your sub system, does not introduce functionality to the sub system
+
+a wrapper class to encapsulate the sub system, to hide its complexity
+
+Removes the need for client classes to manage a subsystem on  their own, resulting in less coupling between
+the subsystem and the client classes
+
+Handles instantiation and redirection of tasks to the appropriate class within the sub system
+
+provides a client class with a simplified interface for the sub system
+
+Conditions required for you to use the facade desgin pattern:
+
+You need a class to act as an interface between your sub system and a client class
+
+You need to simplify the interaction with your sub system for client classes.
+
+Key design principles used to implement the facade design pattern: 
+Encapsulation, Information hiding, separation of concerns 
+
+Adapter Pattern: 
+
+ Adapter is a wrapper class : 
+ The adapter encapsulates the adaptee and presents a new interface, or appearance, to the client class.
+ It does this by wrapping the adaptee's interface and exposing a new target interface that makes sense 
+ to the client
+ 
+Wrap the adaptee and expose a target interface to the client.
+
+Indirectly change the adaptee's interface into one that client is expecting by implementing a
+target interface.
+
+indirectly translate the client's request into one that the adaptee is expecting.
+
+Reuse an existing adaptee with an incompatible interface.
+
