@@ -1,5 +1,6 @@
 // Structural Design Patterns 
 
+***********************************************************************************************
 Facade Pattern :
 A facade simply acts as a point of entry in your sub system, does not introduce functionality to the sub system
 
@@ -37,6 +38,8 @@ indirectly translate the client's request into one that the adaptee is expecting
 
 Reuse an existing adaptee with an incompatible interface.
 
+***********************************************************************************************
+
 Composite Pattern : 
 
 To compose neested structure of Objects;
@@ -66,4 +69,58 @@ are of a common type.
 
 Composite design patterns apply the design principles of decomposition & generalization.
 
+***********************************************************************************************
+
+Proxy Pattern : allows a proxy class to represent a real "subject" class. acts as a lightwright version of the 
+original object. can perform same tasks as an original object but may delegate requests to the original object to achieve 
+them
+three most common usecases for proxy pattern
+To act as a virtual proxy : used in place of a resource intensive real subject class. commonly used on image in web pages
+or graphic editors
+
+To act a protection proxy :
+when a proxy class is used to control access to the real subject class. for example, a system that is used by both students 
+and instructors might limit access based on roles
+
+To act as a remote proxy : 
+when a proxy class is local, and the real subject exists remotely. Google docs
+
+
+In summary, a proxy design patterns allows you to delay creating resource-intensive objects untill needed, control
+access to specific object, or when you need something to as a local representation of a remote system
+
+Main features:
+To use the proxy class to wrap the real subject class
+To have a polymorphic design so that the client class can expect the same interface for proxy and real subject
+
+To use a lightweight proxy in place of a resource intensive object untill its needed
+
+To implement verification to determine whether to send request to the real subject and to whom it should be sent
+
+To represent a local representation of a system that is not in the same physical or virtual space
+
+***********************************************************************************************
+
+Decorator Pattern : 
+
+changes to classes cannot be made at runtime, as the behaviour of an object is defined by its class, and only occurs at runtime
+a new class would need to be created in order to achieve a new combination of behaviours while a program is running
+
+A decorator pattern allows additional behaviors or responsibilities to be dynamically attached to an object, through
+the use of aggregation to combine behaviors at run time
+
+In summary, the main features of a decorate design pattern are
+
+We can add, in effect, any number of behaviors dynamically to an object at runtime by using aggregation as 
+a substitute for pure inheritance
+
+Polymorphism is achieved by implementing a single interface
+
+aggregation lets us create a stack of objects
+
+Each decorator object in the stack is aggregated in a one to one relationship with the object below it in 
+stack
+
+By combining aggregation and polymorphism, we can recursively invoke the same behavior down the stack and have the 
+behavior execute upwards from the concrete component object
 
