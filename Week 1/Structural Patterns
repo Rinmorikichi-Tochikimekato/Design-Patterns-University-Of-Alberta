@@ -37,3 +37,33 @@ indirectly translate the client's request into one that the adaptee is expecting
 
 Reuse an existing adaptee with an incompatible interface.
 
+Composite Pattern : 
+
+To compose neested structure of Objects;
+To deal with classes for these objects uniformly
+
+In this design, a component interface serves as the supertyupe for a set of classes. Using polymorphism, 
+all implementing classes conform to the same interface, which allows them to be dealt with uniformly
+
+A composite class is present as well. This class is used to aggregate any class that implements the comonent
+interface. the compositie class allows you to traverse through and potenially manipulate the component onjects 
+that the composite object contains/
+
+A leaf class represents a non composite type. 
+
+Both of them implement a component interface, unifying them in a single type.
+
+Composite object can contain another composite object since the comp class is a subtype of the component. 
+This is known as recursive composition
+
+In summary, a composite design pattern allows you to build a tree like structure of objects and to treat indivual
+types of those objects uniformly. this is achieved by
+
+Enforcing polymorphism across each class through implementing an interface(or inheriting from a superclass)
+
+using a technique called as recursive composition that allows objects to be composed of other objects that 
+are of a common type.
+
+Composite design patterns apply the design principles of decomposition & generalization.
+
+
