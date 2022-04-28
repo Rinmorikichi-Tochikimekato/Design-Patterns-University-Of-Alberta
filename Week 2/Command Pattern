@@ -1,0 +1,22 @@
+Command Pattern: encapsulates a request as an object of its own. In general, when an object makes a request for a second object to do an action, 
+the first object would call a method of the second object and 2nd object would complete the task. There is a direct comm between sender and reciever object.
+
+Now the command pattern creates a command object between the sender and receiver. This way, the sender does not have to know about the receiver and methods to call.
+
+An invoker is used to make the command object do what's it supposed to do. An invoker is therefore and object
+the invokes the command objects to complete whatever task  it is supposed to do.
+
+A command manager can also be used that basically keeps track of the commands, manipulates them and invokes them.
+
+Purpose of the command pattern : 
+. Store and schedule different requests
+. To allow commands to be undone and redone
+
+Benefits of the command pattern : 
+The command pattern allows a commands to be manipulated as objects. Functionalities can be added to the command objects, such as putting them into queues and adding
+undo/redo functions
+
+command patterns also decouple the objects of your software program, the command objects works by invoking receiver objects, and the original object doesn't need to
+be aware
+
+each and every service in the system can be an object of its own.
