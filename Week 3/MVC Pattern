@@ -1,1 +1,32 @@
 //MVC Pattern
+Model View Controller pattern is a patter that should be considered for use with user interfaces.
+MVC patterns divide the responsibilites of a system that offers a user interface into three parts, model, view & controller
+
+The Model: contains the underlying state, and logic that users want to see and manipulate through an interface. 
+Backend or the underlying software. model is self contained. is has all the state, methods and data needed to exist on its own
+
+The View: it gives users the way to see the model in the way they expect and allows them to interact with or atleast parts of it. 
+frontend or the presentation layer of the software. A model could have several views that present different parts of the model.
+
+The observer design pattern allows for the view to be updated, if a value changes in the model. since in observer pattern, 
+observers are notified when the state of the subject changes. 
+
+The Controller: Information about user interaction is passed to a controller. The controller is responsible for interpreting requests and interacts with elements
+in the view, and changing the model. the view is therefor only responsible for the visual appearance of the system. 
+
+MVC pattern uses the separation of concerns design principle to divide up the main responsibilites in an interactive system. 
+The controller ensures loose coupling between view and model
+Model : Entity Object : derived from analysing the problem space
+View : Boundary Object : edge of your system that deals with users
+Controller : Control Object : recieves events and coordinates actions
+
+Controllers can make the code better:
+view can focus on its main purpose, presenting the user interface. and controller takes the 
+responsibilty of interpreting the input from the user and working with model based on that input
+
+The view and model are not tightly coupled, when a controller is betwen the. features can be added to the model and tested long before
+they are added to the view
+
+
+
+
